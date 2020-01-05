@@ -1,0 +1,108 @@
+.menu {
+    @include gridCenter;
+
+    .menucontainer {
+        @include flex(column);
+        @include setDimensions(97%, 90%);
+
+        .logoholder {
+            @include gridCenter;
+            @include setDimensions(20%, 100%);
+        }
+
+        .navigation {
+            @include gridCenter;
+            @include setDimensions(65%, 100%);
+        }
+
+        .menufooter {
+            @include flex(row);
+            @include setDimensions(15%, 100%);
+        }
+    }
+}
+
+.navigation {
+    .navigationcontainer {
+        @include flex(column);
+        justify-content: space-between;
+        @include setDimensions(40%, 100%);
+
+        position: relative;
+
+        .navindicator {
+            top: 0;
+            right: 0;
+            position: absolute;
+            border-radius: 2vw;
+            background-color: $accent;
+            @include setDimensions(100% / 4, 0.5vw);
+        }
+
+        .navigationitem {
+            @include setDimensions(100% / 4, calc(100% - 1vw));
+            margin-right: 1vw;
+        }
+    }
+}
+
+.navigationitem {
+    @include flex(row);
+    justify-content: initial;
+
+    .naviconholder {
+        @include setDimensions(60%, 20%);
+        @include gridCenter;
+        svg {
+            @include setDimensions(80%, auto);
+        }
+    }
+
+    color: $darkPrimary;
+
+    &:hover {
+        color: $accent;
+        cursor: pointer;
+    }
+}
+
+.menufooter {
+    .signoutbutton {
+        @include setDimensions(30%, 60%);
+        @include flex(row);
+        justify-content: start;
+
+        svg {
+            @include setDimensions(70%, 30%);
+        }
+
+        &:hover {
+            color: $accent;
+            cursor: pointer;
+        }
+    }
+
+    .settings {
+        @include setDimensions(30%, 20%);
+        @include gridCenter;
+        svg {
+            @include setDimensions(70%, 100%);
+        }
+
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    .darkmode {
+        @include setDimensions(30%, 20%);
+        @include gridCenter;
+        svg {
+            @include setDimensions(70%, 100%);
+        }
+
+        &:hover {
+            color: $accent;
+        }
+    }
+}

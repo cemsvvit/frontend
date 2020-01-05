@@ -1,0 +1,106 @@
+@import "snippets";
+@import "master";
+@import "menu";
+
+.statcards {
+    @include setDimensions(28%, 98%);
+    @include flex(row);
+    justify-content: space-between;
+
+    .statcard {
+        @include setDimensions(96%, 30%);
+    }
+}
+
+.statcard {
+    @include flex(column);
+
+    .statheader {
+        @include setDimensions(30%, 100%);
+        @include flex(row);
+        justify-content: space-between;
+
+        h2 {
+            margin-left: 3vw;
+        }
+
+        svg {
+            @include setDimensions(70%, 15%);
+        }
+    }
+
+    .statcontentcont {
+        @include setDimensions(70%, 100%);
+        @include flex(row);
+
+        .statcontent {
+            @include setDimensions(100%, 49%);
+            @include flex(column);
+            justify-content: space-evenly;
+            text-align: center;
+
+            p {
+                width: 80%;
+            }
+        }
+
+        .statcontdivider {
+            @include setDimensions(70%, 1%);
+            background-color: $darkSecondary;
+            opacity: 0.5;
+            border-radius: 1vw;
+        }
+
+        transition: all 0.2s ease-in;
+
+        &:hover {
+            border-radius: 1vw;
+            box-shadow: 0 4.5px 3.6px rgba(0, 0, 0, 0.024),
+                0 12.5px 10px rgba(0, 0, 0, 0.035),
+                0 30.1px 24.1px rgba(0, 0, 0, 0.046),
+                0 100px 80px rgba(0, 0, 0, 0.07);
+        }
+    }
+}
+
+.graphholder {
+    @include setDimensions(68%, 98%);
+    @include flex(column);
+
+    .graphtimepicker {
+        @include setDimensions(10%, 100%);
+        @include flex(row);
+        justify-content: flex-end;
+
+        p {
+            padding-left: 2vw;
+
+            &:hover {
+                color: $accent;
+                cursor: pointer;
+            }
+
+            &:last-child {
+                padding-right: 2vw;
+            }
+        }
+    }
+
+    .graphrel {
+        position: relative;
+        @include setDimensions(90%, 100%);
+        @include gridCenter;
+
+        .graphabs {
+            position: absolute;
+            @include setDimensions(96%, 96%);
+        }
+    }
+}
+
+#Chart {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}

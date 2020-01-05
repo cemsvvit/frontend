@@ -1,0 +1,488 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+* {
+  border: 0;
+  margin: 0;
+  text-overflow: clip;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 3vw;
+}
+
+h2 {
+  font-size: 2vw;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 2vw;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.5vw;
+}
+
+body {
+  color: #0c1018;
+  background: #ffffff;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body .menu {
+  height: 100%;
+  width: 20%;
+}
+
+body .content {
+  height: 100%;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .container {
+  background-color: rgba(199, 205, 209, 0.3);
+  border-radius: 1vw;
+}
+
+body .active {
+  color: #1da1f2;
+}
+
+.menu {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.menu .menucontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 97%;
+  width: 90%;
+}
+
+.menu .menucontainer .logoholder {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 20%;
+  width: 100%;
+}
+
+.menu .menucontainer .navigation {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 65%;
+  width: 100%;
+}
+
+.menu .menucontainer .menufooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 15%;
+  width: 100%;
+}
+
+.navigation .navigationcontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 40%;
+  width: 100%;
+  position: relative;
+}
+
+.navigation .navigationcontainer .navindicator {
+  top: 0;
+  right: 0;
+  position: absolute;
+  border-radius: 2vw;
+  background-color: #1da1f2;
+  height: 25%;
+  width: 0.5vw;
+}
+
+.navigation .navigationcontainer .navigationitem {
+  height: 25%;
+  width: calc(100% - 1vw);
+  margin-right: 1vw;
+}
+
+.navigationitem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  color: #0c1018;
+}
+
+.navigationitem .naviconholder {
+  height: 60%;
+  width: 20%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.navigationitem .naviconholder svg {
+  height: 80%;
+  width: auto;
+}
+
+.navigationitem:hover {
+  color: #1da1f2;
+  cursor: pointer;
+}
+
+.menufooter .signoutbutton {
+  height: 30%;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.menufooter .signoutbutton svg {
+  height: 70%;
+  width: 30%;
+}
+
+.menufooter .signoutbutton:hover {
+  color: #1da1f2;
+  cursor: pointer;
+}
+
+.menufooter .settings {
+  height: 30%;
+  width: 20%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.menufooter .settings svg {
+  height: 70%;
+  width: 100%;
+}
+
+.menufooter .settings:hover {
+  color: #1da1f2;
+}
+
+.menufooter .darkmode {
+  height: 30%;
+  width: 20%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.menufooter .darkmode svg {
+  height: 70%;
+  width: 100%;
+}
+
+.menufooter .darkmode:hover {
+  color: #1da1f2;
+}
+
+.statcards {
+  height: 28%;
+  width: 98%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.statcards .statcard {
+  height: 96%;
+  width: 30%;
+}
+
+.statcard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.statcard .statheader {
+  height: 30%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.statcard .statheader h2 {
+  margin-left: 3vw;
+}
+
+.statcard .statheader svg {
+  height: 70%;
+  width: 15%;
+}
+
+.statcard .statcontentcont {
+  height: 70%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.statcard .statcontentcont .statcontent {
+  height: 100%;
+  width: 49%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+}
+
+.statcard .statcontentcont .statcontent p {
+  width: 80%;
+}
+
+.statcard .statcontentcont .statcontdivider {
+  height: 70%;
+  width: 1%;
+  background-color: #253341;
+  opacity: 0.5;
+  border-radius: 1vw;
+}
+
+.statcard .statcontentcont:hover {
+  border-radius: 1vw;
+  -webkit-box-shadow: 0 4.5px 3.6px rgba(0, 0, 0, 0.024), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 30.1px 24.1px rgba(0, 0, 0, 0.046), 0 100px 80px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 4.5px 3.6px rgba(0, 0, 0, 0.024), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 30.1px 24.1px rgba(0, 0, 0, 0.046), 0 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+.graphholder {
+  height: 68%;
+  width: 98%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.graphholder .graphtimepicker {
+  height: 10%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.graphholder .graphtimepicker p {
+  padding-left: 2vw;
+}
+
+.graphholder .graphtimepicker p:hover {
+  color: #1da1f2;
+  cursor: pointer;
+}
+
+.graphholder .graphtimepicker p:last-child {
+  padding-right: 2vw;
+}
+
+.graphholder .graphrel {
+  position: relative;
+  height: 90%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.graphholder .graphrel .graphabs {
+  position: absolute;
+  height: 96%;
+  width: 96%;
+}
+
+#Chart {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+/*# sourceMappingURL=home.css.map */

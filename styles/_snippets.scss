@@ -1,0 +1,16 @@
+@mixin setDimensions($h, $w) {
+    height: $h;
+    width: $w;
+}
+
+@mixin gridCenter {
+    display: grid;
+    place-items: center;
+}
+
+@mixin flex($dir) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: center;
+    align-items: center;
+}
