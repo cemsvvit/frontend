@@ -5,17 +5,12 @@ Chart.defaults.global.defaultFontSize = 15;
 Chart.defaults.global.defaultFontColor = "#0c1018";
 
 let energydata = [];
-let energylabels = [
-    "School",
-    "Academics Block",
-    "Admin Block",
-    "Girl's Hostel",
-    "Auditorium"
-];
+let energylabels = [];
+var myChart;
 
 function drawchart() {
-    var myBarChart = new Chart(ctx, {
-        type: "bar",
+    myChart = new Chart(ctx, {
+        type: "line",
         data: {
             labels: energylabels,
             datasets: [
@@ -56,7 +51,39 @@ function drawchart() {
     });
 }
 
-fetch("http://18.208.162.97/todaysusage")
+function getblockdata(block) {
+    let url = "http://18.208.162.97/ptottoday";
+    url = url + block;
+    energydata = [];
+    energylabels = [];
+    fetch(url)
+        .then(function(response) {
+            if (response.status !== 200) {
+                console.log(
+                    "Looks like there was a problem. Status Code: " +
+                        response.status
+                );
+                return;
+            }
+
+            response.json().then(function(data) {
+                data.forEach(element => {
+                    if (element["tstamp"].slice(14, 16) == "01") {
+                        energylabels.push(element["tstamp"].slice(11, 13));
+                        energydata.push(element["Ptot"]);
+                    }
+                });
+                myChart.destroy();
+                drawchart();
+            });
+        })
+        .catch(function(err) {
+            console.log("Fetch Error :-S", err);
+        });
+}
+
+// Initalize graph
+fetch("http://18.208.162.97/ptottoday2")
     .then(function(response) {
         if (response.status !== 200) {
             console.log(
@@ -68,7 +95,10 @@ fetch("http://18.208.162.97/todaysusage")
 
         response.json().then(function(data) {
             data.forEach(element => {
-                energydata.push(element["Energy Consumed"]);
+                if (element["tstamp"].slice(14, 16) == "01") {
+                    energylabels.push(element["tstamp"].slice(11, 13));
+                    energydata.push(element["Ptot"]);
+                }
             });
             drawchart();
         });
@@ -76,3 +106,21 @@ fetch("http://18.208.162.97/todaysusage")
     .catch(function(err) {
         console.log("Fetch Error :-S", err);
     });
+
+var statcards = document.querySelectorAll(".statcard");
+
+statcards[0].addEventListener("click", () => {
+    getblockdata(2);
+});
+statcards[1].addEventListener("click", () => {
+    getblockdata(3);
+});
+statcards[2].addEventListener("click", () => {
+    getblockdata(4);
+});
+statcards[3].addEventListener("click", () => {
+    getblockdata(5);
+});
+statcards[4].addEventListener("click", () => {
+    getblockdata(6);
+});

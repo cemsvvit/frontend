@@ -1,11 +1,66 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
 
-$lightPrimary: #ffffff;
-$lightSecondary: rgba(165, 216, 255, 0.4);
-$lightSecondary: rgba(199, 205, 209, 0.3);
-$darkPrimary: #0c1018;
-$darkSecondary: #253341;
-$accent: #1da1f2;
+html {
+    --light-primary: #ffffff;
+    --light-secondary: rgba(199, 205, 209, 0.3);
+    --dark-primary: #0c1018;
+    --dark-secondary: #253341;
+    --accent-color: #1da1f2;
+}
+
+html[data-theme="dark"] {
+    --light-primary: #0c1018;
+    --light-secondary: #253341;
+    --dark-primary: #ffffff;
+    --dark-secondary: rgba(199, 205, 209, 0.3);
+    --accent-color: #1da1f2;
+}
+
+$lightPrimary: var(--light-primary);
+$lightSecondary: var(--light-secondary);
+$darkPrimary: var(--dark-primary);
+$darkSecondary: var(--dark-secondary);
+$accent: var(--accent-color);
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+    transition: all 750ms !important;
+    transition-delay: 0 !important;
+}
+
+body {
+    color: $darkPrimary;
+    background: $lightPrimary;
+    @include setDimensions(100vh, 100vw);
+    font-family: "Montserrat", sans-serif;
+
+    @include flex(row);
+    justify-content: flex-start;
+
+    .menu {
+        @include setDimensions(100%, 20%);
+    }
+
+    .content {
+        @include setDimensions(100%, 79%);
+        @include flex(column);
+        justify-content: space-around;
+    }
+
+    .container {
+        border-radius: 1vw;
+        background-color: $lightSecondary;
+    }
+
+    .active {
+        color: $accent;
+    }
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 
 * {
     border: 0;
@@ -19,46 +74,32 @@ h1 {
 }
 
 h2 {
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 600;
 }
 
 h3 {
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 500;
 }
 
 p {
-    font-size: 1.5vw;
+    font-size: 1vw;
 }
 
-body {
-    color: $darkPrimary;
-    background: $lightPrimary;
-    @include setDimensions(100vh, 100vw);
-    font-family: "Montserrat", sans-serif;
+::-webkit-scrollbar-track {
+    height: 10px;
+    border-radius: 1vw;
+    -webkit-box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
+}
 
-    @include flex(row);
+::-webkit-scrollbar {
+    height: 10px;
+    background-color: $lightSecondary;
+}
 
-    .menu {
-        @include setDimensions(100%, 20%);
-    }
-
-    .content {
-        @include setDimensions(100%, 80%);
-        @include flex(column);
-        justify-content: space-around;
-    }
-
-    .container {
-        background-color: $lightSecondary;
-        border-radius: 1vw;
-    }
-
-    .active {
-        color: $accent;
-    }
-
-    overflow-x: hidden;
-    overflow-y: hidden;
+::-webkit-scrollbar-thumb {
+    border-radius: 1vw;
+    background-color: $accent;
+    // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }

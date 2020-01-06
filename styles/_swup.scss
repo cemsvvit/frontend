@@ -1,0 +1,16 @@
+.transition-sr {
+    transition: 1s;
+    opacity: 1;
+    transform-origin: left;
+    transform: translateX(0);
+}
+
+html.is-animating .transition-sr {
+    opacity: 1;
+    transform: translateX(100%);
+}
+
+html.is-leaving .transition-sr {
+    opacity: 0;
+    transform: translateX(0);
+}

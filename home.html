@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +7,11 @@
         <title>CEMS</title>
         <link rel="stylesheet" href="./styles/home.css" />
         <link rel="icon" type="png" href="./images/logo.png" />
+        <script src="./node_modules/chart.js/dist/Chart.js"></script>
+        <script defer src="./js/colortheme.js"></script>
+        <script defer src="./js/homechart.js"></script>
+        <script defer src="./js/navigation.js"></script>
+        <script defer src="./js/home.js"></script>
     </head>
     <body>
         <div class="menu">
@@ -17,7 +22,7 @@
                 <div class="navigation">
                     <div class="navigationcontainer">
                         <div class="navindicator"></div>
-                        <div class="navigationitem">
+                        <div class="navigationitem active">
                             <div class="naviconholder">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +140,7 @@
                             ></path>
                         </svg>
                     </div>
-                    <div class="darkmode">
+                    <div class="colormode">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -156,10 +161,89 @@
                 </div>
             </div>
         </div>
-        <div class="content"></div>
-        <script src="./node_modules/swup/dist/swup.min.js"></script>
-        <script>
-            const swup = new Swup();
-        </script>
+        <div class="content">
+            <div class="statcards">
+                <div class="statcard container">
+                    <div class="statheader">
+                        <h2>Usage</h2>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="feather feather-chevron-right"
+                        >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="statcontentcont">
+                        <div class="statcontent">
+                            <h3>Today</h3>
+                            <p>&nbsp;</p>
+                        </div>
+                        <div class="statcontdivider"></div>
+                        <div class="statcontent">
+                            <h3>Month</h3>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="statcard container">
+                    <div class="statheader">
+                        <h2>Cost</h2>
+                    </div>
+                    <div class="statcontentcont">
+                        <div class="statcontent">
+                            <h3>Today</h3>
+                            <p>&nbsp;</p>
+                        </div>
+                        <div class="statcontdivider"></div>
+                        <div class="statcontent">
+                            <h3>Month</h3>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="statcard container">
+                    <div class="statheader">
+                        <h2>Issues</h2>
+                    </div>
+                    <div class="statcontentcont">
+                        <div class="statcontent">
+                            <h3>Errors</h3>
+                            <p>&nbsp;</p>
+                        </div>
+                        <div class="statcontdivider"></div>
+                        <div class="statcontent">
+                            <h3>Warnings</h3>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="graphholder container">
+                <div class="graphtimepicker">
+                    <div class="timeperiodhol active">
+                        <p>Last day</p>
+                    </div>
+                    <div class="timeperiodhol">
+                        <p>Last week</p>
+                    </div>
+                    <div class="timeperiodhol">
+                        <p>Last month</p>
+                    </div>
+                </div>
+                <div class="graphrel">
+                    <div class="graphabs">
+                        <canvas id="Chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

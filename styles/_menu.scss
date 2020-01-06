@@ -94,7 +94,7 @@
         }
     }
 
-    .darkmode {
+    .colormode {
         @include setDimensions(30%, 20%);
         @include gridCenter;
         svg {
@@ -104,5 +104,9 @@
         &:hover {
             color: $accent;
         }
+    }
+
+    .dark {
+        color: $accent;
     }
 }

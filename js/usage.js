@@ -1,4 +1,4 @@
-console.log("Home connected");
+console.log("Usage connected");
 
 let usagedata = [];
 
@@ -30,17 +30,21 @@ function updatedata() {
     document.querySelectorAll(".statcontent p")[1].innerHTML =
         "12221" + "<br>units";
     document.querySelectorAll(".statcontent p")[2].innerHTML =
-        "₹ " + Math.round(usagedata[0]["Energy Consumed"] * 7);
-    document.querySelectorAll(".statcontent p")[3].innerHTML = "₹ 100000";
-    document.querySelectorAll(".statcontent p")[4].innerHTML = "0 errors";
-    document.querySelectorAll(".statcontent p")[5].innerHTML = "0 warnings";
+        Math.round(usagedata[1]["Energy Consumed"]) + "<br>units";
+    document.querySelectorAll(".statcontent p")[3].innerHTML =
+        "12221" + "<br>units";
+    document.querySelectorAll(".statcontent p")[4].innerHTML =
+        Math.round(usagedata[2]["Energy Consumed"]) + "<br>units";
+    document.querySelectorAll(".statcontent p")[5].innerHTML =
+        "12221" + "<br>units";
+    document.querySelectorAll(".statcontent p")[6].innerHTML =
+        Math.round(usagedata[3]["Energy Consumed"]) + "<br>units";
+    document.querySelectorAll(".statcontent p")[7].innerHTML =
+        "12221" + "<br>units";
+    document.querySelectorAll(".statcontent p")[8].innerHTML =
+        Math.round(usagedata[4]["Energy Consumed"]) + "<br>units";
+    document.querySelectorAll(".statcontent p")[9].innerHTML =
+        "12221" + "<br>units";
 }
 
 let dataupdateloop = setInterval(updatedata, 1000);
-
-// Navigation
-document
-    .querySelectorAll(".statheader svg")[0]
-    .addEventListener("click", () => {
-        window.location = "./usage.html";
-    });

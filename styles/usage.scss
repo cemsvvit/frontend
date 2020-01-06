@@ -1,0 +1,18 @@
+@import "snippets";
+@import "master";
+@import "menu";
+@import "home";
+
+.statcards {
+    @include setDimensions(30%, 100%);
+    @include gridCenter;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1vw;
+    overflow-x: scroll;
+
+    .statcard {
+        @include setDimensions(93%, 24vw);
+    }
+}
