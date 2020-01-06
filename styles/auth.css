@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap");
+html,
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  color: #0c1018;
+  font-family: "Montserrat", sans-serif;
+}
+
+button {
+  width: 16vw;
+  height: 8vh;
+  border: none;
+  border-radius: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  outline: none;
+  background: #1da1f2;
+}
+
+button:hover {
+  border: #1da1f2 2px solid;
+  background: #ffffff;
+  color: #1da1f2;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 600;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 500;
+}
+
+h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Logo */
+@-webkit-keyframes LogoSlideIn {
+  0% {
+    opacity: 0;
+    width: 100%;
+    margin-left: 30vw;
+  }
+  50% {
+    opacity: 1;
+    width: 100%;
+    margin-left: 0px;
+  }
+  100% {
+    opacity: 1;
+    width: 50%;
+  }
+}
+@keyframes LogoSlideIn {
+  0% {
+    opacity: 0;
+    width: 100%;
+    margin-left: 30vw;
+  }
+  50% {
+    opacity: 1;
+    width: 100%;
+    margin-left: 0px;
+  }
+  100% {
+    opacity: 1;
+    width: 50%;
+  }
+}
+
+@-webkit-keyframes LogoReSize {
+  to {
+    font-size: 150px;
+  }
+}
+
+@keyframes LogoReSize {
+  to {
+    font-size: 150px;
+  }
+}
+
+.Logo {
+  opacity: 0;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-animation: LogoSlideIn 0.5s ease-in 0.5s forwards;
+          animation: LogoSlideIn 0.5s ease-in 0.5s forwards;
+}
+
+.Logo h1 {
+  font-size: 200px;
+  -webkit-animation: LogoReSize 0.5s ease 1s forwards;
+          animation: LogoReSize 0.5s ease 1s forwards;
+}
+
+@-webkit-keyframes authappear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes authappear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.auth {
+  width: 50%;
+  opacity: 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-animation: authappear 0.5s ease-in 1.5s forwards;
+          animation: authappear 0.5s ease-in 1.5s forwards;
+}
+
+.input {
+  position: relative;
+  width: 16vw;
+  height: 8vh;
+  border: 2px #a5d8ff solid;
+  border-color: #0c1018;
+  border-radius: 15px;
+}
+
+.input input {
+  width: 90%;
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: none;
+  outline: none;
+  background: inherit;
+  font-size: 2vh;
+}
+
+.input label {
+  position: absolute;
+  top: 30%;
+  left: 2vw;
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  font-size: 3vh;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.input span {
+  padding: 2px;
+  background: #ffffff;
+}
+
+.input input:focus + .input-label,
+.input input:valid + .input-label {
+  -webkit-transform: translate3d(-5%, -45%, 0);
+          transform: translate3d(-5%, -45%, 0);
+  font-size: 16px;
+}
+
+#Email {
+  margin-top: 2vh;
+}
+
+#Password {
+  margin-top: 2vh;
+}
+
+.login {
+  margin-top: 4vh;
+}
+
+#signupmessage {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+#signupredir {
+  font-size: 20px;
+  margin-left: 5px;
+  color: #1da1f2;
+}
+
+#loginmessage {
+  font-size: 15px;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+#loginredir {
+  font-size: 15px;
+  margin-left: px;
+  color: #1da1f2;
+}
+/*# sourceMappingURL=auth.css.map */

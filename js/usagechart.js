@@ -68,10 +68,8 @@ function getblockdata(block) {
 
             response.json().then(function(data) {
                 data.forEach(element => {
-                    if (element["tstamp"].slice(14, 16) == "01") {
-                        energylabels.push(element["tstamp"].slice(11, 13));
-                        energydata.push(element["Ptot"]);
-                    }
+                    energylabels.push(element["tstamp"].slice(11, 16));
+                    energydata.push(element["Ptot"]);
                 });
                 myChart.destroy();
                 drawchart();
@@ -95,10 +93,8 @@ fetch("http://18.208.162.97/ptottoday2")
 
         response.json().then(function(data) {
             data.forEach(element => {
-                if (element["tstamp"].slice(14, 16) == "01") {
-                    energylabels.push(element["tstamp"].slice(11, 13));
-                    energydata.push(element["Ptot"]);
-                }
+                energylabels.push(element["tstamp"].slice(11, 16));
+                energydata.push(element["Ptot"]);
             });
             drawchart();
         });

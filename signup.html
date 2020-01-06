@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>CEMS</title>
-        <link rel="stylesheet" href="./styles/auth.css" />
+        <link rel="stylesheet" href="styles/auth.css" />
     </head>
     <body>
         <div class="Logo">
@@ -13,6 +13,17 @@
         </div>
         <div class="auth">
             <div class="auth-wrapper">
+                <div class="input" id="UserName">
+                    <input
+                        type="text"
+                        name="UserName"
+                        id="Usernameinput"
+                        required
+                    />
+                    <label for="Email" class="input-label">
+                        <span class="Floating-text">Username</span>
+                    </label>
+                </div>
                 <div class="input" id="Email">
                     <input type="text" name="Email" id="Emailinput" required />
                     <label for="Email" class="input-label">
@@ -30,14 +41,12 @@
                         <span class="Floating-text">Password</span>
                     </label>
                 </div>
-                <button class="login" id="login" onclick="funclogin()">
-                    Login
+                <button class="login" id="signup" onclick="funcsignup()">
+                    Sign up
                 </button>
-                <div id="signupmessage">
-                    <span>Need an account?</span>
-                    <a href="signup.html"
-                        ><span id="signupredir"> Sign up</span></a
-                    >
+                <div id="loginmessage">
+                    <span>Already have an account?</span>
+                    <a href="index.html"><span id="loginredir"> Login</span></a>
                 </div>
             </div>
         </div>
