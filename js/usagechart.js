@@ -9,6 +9,7 @@ let energylabels = [];
 var myChart;
 
 function drawchart() {
+    console.log("drawing");
     myChart = new Chart(ctx, {
         type: "line",
         data: {
@@ -52,10 +53,8 @@ function drawchart() {
 }
 
 function getblockdata(block) {
-    let url = "http://18.208.162.97/ptottoday";
+    let url = "http://52.23.205.22/ptottoday";
     url = url + block;
-    energydata = [];
-    energylabels = [];
     fetch(url)
         .then(function(response) {
             if (response.status !== 200) {
@@ -67,6 +66,8 @@ function getblockdata(block) {
             }
 
             response.json().then(function(data) {
+                energydata = [];
+                energylabels = [];
                 data.forEach(element => {
                     energylabels.push(element["tstamp"].slice(11, 16));
                     energydata.push(element["Ptot"]);
@@ -81,7 +82,7 @@ function getblockdata(block) {
 }
 
 // Initalize graph
-fetch("http://18.208.162.97/ptottoday2")
+fetch("http://52.23.205.22/ptottoday2")
     .then(function(response) {
         if (response.status !== 200) {
             console.log(

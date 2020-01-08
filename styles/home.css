@@ -44,9 +44,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -58,7 +58,7 @@ body .menu {
 
 body .content {
   height: 100%;
-  width: 79%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,10 +74,11 @@ body .content {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  align-items: center;
 }
 
 body .container {
-  border-radius: 1vw;
+  border-radius: 0.7vw;
   background-color: var(--light-secondary);
 }
 
@@ -146,8 +147,9 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 97%;
-  width: 90%;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
 }
 
 .menu .menucontainer .logoholder {
@@ -330,8 +332,8 @@ p {
 }
 
 .statcards {
-  height: 30%;
-  width: 100%;
+  height: 25%;
+  width: 98%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -352,7 +354,7 @@ p {
 
 .statcards .statcard {
   height: 93%;
-  width: 32%;
+  width: 32.5%;
 }
 
 .statcard {
@@ -460,8 +462,8 @@ p {
 }
 
 .graphholder {
-  height: 67%;
-  width: 100%;
+  height: 70%;
+  width: 98%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

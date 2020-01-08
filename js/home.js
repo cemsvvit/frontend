@@ -1,9 +1,11 @@
 console.log("Home connected");
 
+localStorage.setItem("colormode", "light");
+
 let usagedata = [];
 
 function fetchdata() {
-    fetch("http://18.208.162.97/todaysusage")
+    fetch("http://52.23.205.22/todaysusage")
         .then(function(response) {
             if (response.status !== 200) {
                 console.log(

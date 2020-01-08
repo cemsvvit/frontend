@@ -4,7 +4,7 @@
 @import "home";
 
 .statcards {
-    @include setDimensions(30%, 100%);
+    @include setDimensions(25%, 98%);
     @include gridCenter;
     display: grid;
     grid-template-columns: repeat(5, 1fr);

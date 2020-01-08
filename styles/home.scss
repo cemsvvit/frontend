@@ -3,12 +3,12 @@
 @import "menu";
 
 .statcards {
-    @include setDimensions(30%, 100%);
+    @include setDimensions(25%, 98%);
     @include flex(row);
     justify-content: space-between;
 
     .statcard {
-        @include setDimensions(93%, 32%);
+        @include setDimensions(93%, 32.5%);
     }
 }
 
@@ -70,7 +70,7 @@
 }
 
 .graphholder {
-    @include setDimensions(67%, 100%);
+    @include setDimensions(70%, 98%);
     @include flex(column);
 
     .graphtimepicker {

@@ -13,8 +13,11 @@ let energylabels = [
     "Auditorium"
 ];
 
+var myChart;
+
 function drawchart() {
-    var myBarChart = new Chart(ctx, {
+    console.log("drawing");
+    myChart = new Chart(ctx, {
         type: "bar",
         data: {
             labels: energylabels,
@@ -56,7 +59,7 @@ function drawchart() {
     });
 }
 
-fetch("http://18.208.162.97/todaysusage")
+fetch("http://52.23.205.22//todaysusage")
     .then(function(response) {
         if (response.status !== 200) {
             console.log(
