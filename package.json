@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "chart.js": "^2.9.3",
+    "firebase": "^7.6.2",
     "swup": "^2.0.8"
   },
   "devDependencies": {},
