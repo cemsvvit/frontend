@@ -2,7 +2,12 @@
 
 html {
     --light-primary: #ffffff;
+    --light-primary: #dfe3e9;
+    --light-primary: #e9eaed;
+    --light-primary: #e6e5ea;
+    --light-primary: #e4e8f1;
     --light-secondary: rgba(199, 205, 209, 0.3);
+    --light-secondary: #ffffff;
     --dark-primary: #0c1018;
     --dark-secondary: #253341;
     --accent-color: #1da1f2;
@@ -11,6 +16,7 @@ html {
 html[data-theme="dark"] {
     --light-primary: #0c1018;
     --light-secondary: #253341;
+    --light-secondary: rgba(255, 255, 255, 0.05);
     --dark-primary: #ffffff;
     --dark-secondary: rgba(199, 205, 209, 0.3);
     --accent-color: #1da1f2;
@@ -96,7 +102,7 @@ p {
 
 ::-webkit-scrollbar {
     height: 10px;
-    background-color: $lightSecondary;
+    background-color: $lightPrimary;
 }
 
 ::-webkit-scrollbar-thumb {

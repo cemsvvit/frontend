@@ -13,6 +13,6 @@
     overflow-x: scroll;
 
     .statcard {
-        @include setDimensions(93%, 24vw);
+        @include setDimensions(93%, 20vw);
     }
 }
