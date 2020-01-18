@@ -4,19 +4,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Usage</title>
-        <link rel="stylesheet" href="./css/usage.css" />
+        <title>Analytics</title>
+        <link rel="stylesheet" href="./css/previousdata.css" />
         <link rel="icon" type="png" href="./images/logo.png" />
         <script defer src="js/services/Chart.min.js"></script>
         <script defer src="js/services/firebase-app.js"></script>
         <script defer src="js/services/firebase-auth.js"></script>
         <script defer src="js/services/firebase-analytics.js"></script>
-        <script defer src="js/global/fetch.js"></script>
-        <script defer src="js/global/chart.js"></script>
         <script defer src="js/global/ui.js"></script>
         <script defer src="js/global/colortheme.js"></script>
         <script defer src="js/authmon.js"></script>
-        <script defer src="js/usage.js"></script>
+        <script defer src="js/previousdata.js"></script>
     </head>
     <body>
         <div class="menu">
@@ -27,7 +25,7 @@
                 <div class="navigation">
                     <div class="navigationcontainer">
                         <div class="navindicator"></div>
-                        <div class="navigationitem active">
+                        <div class="navigationitem">
                             <div class="naviconholder">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +51,7 @@
                                 <p>Home</p>
                             </div>
                         </div>
-                        <div class="navigationitem">
+                        <div class="navigationitem  active">
                             <div class="naviconholder">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -162,108 +160,6 @@
                                 d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
                             ></path>
                         </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="content">
-            <div class="statcards">
-                <div class="statcard container">
-                    <div class="statheader">
-                        <h2>School</h2>
-                    </div>
-                    <div class="statcontentcont">
-                        <div class="statcontent">
-                            <h3>Today</h3>
-                            <p>&nbsp;</p>
-                        </div>
-                        <div class="statcontdivider"></div>
-                        <div class="statcontent">
-                            <h3>Month</h3>
-                            <p>&nbsp;</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="statcard container">
-                    <div class="statheader">
-                        <h2>Academic Block</h2>
-                    </div>
-                    <div class="statcontentcont">
-                        <div class="statcontent">
-                            <h3>Today</h3>
-                            <p>&nbsp;</p>
-                        </div>
-                        <div class="statcontdivider"></div>
-                        <div class="statcontent">
-                            <h3>Month</h3>
-                            <p>&nbsp;</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="statcard container">
-                    <div class="statheader">
-                        <h2>Admin Block</h2>
-                    </div>
-                    <div class="statcontentcont">
-                        <div class="statcontent">
-                            <h3>Today</h3>
-                            <p>&nbsp;</p>
-                        </div>
-                        <div class="statcontdivider"></div>
-                        <div class="statcontent">
-                            <h3>Month</h3>
-                            <p>&nbsp;</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="statcard container">
-                    <div class="statheader">
-                        <h2>Girl's Hostel</h2>
-                    </div>
-                    <div class="statcontentcont">
-                        <div class="statcontent">
-                            <h3>Today</h3>
-                            <p>&nbsp;</p>
-                        </div>
-                        <div class="statcontdivider"></div>
-                        <div class="statcontent">
-                            <h3>Month</h3>
-                            <p>&nbsp;</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="statcard container">
-                    <div class="statheader">
-                        <h2>Auditorium</h2>
-                    </div>
-                    <div class="statcontentcont">
-                        <div class="statcontent">
-                            <h3>Today</h3>
-                            <p>&nbsp;</p>
-                        </div>
-                        <div class="statcontdivider"></div>
-                        <div class="statcontent">
-                            <h3>Month</h3>
-                            <p>&nbsp;</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="graphholder container">
-                <div class="graphtimepicker">
-                    <div class="timeperiodhol active">
-                        <p>Last day</p>
-                    </div>
-                    <div class="timeperiodhol">
-                        <p>Last week</p>
-                    </div>
-                    <div class="timeperiodhol">
-                        <p>Last month</p>
-                    </div>
-                </div>
-                <div class="graphrel">
-                    <div class="graphabs">
-                        <canvas id="Chart"></canvas>
                     </div>
                 </div>
             </div>

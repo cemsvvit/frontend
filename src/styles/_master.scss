@@ -11,6 +11,7 @@ html {
     --dark-primary: #0c1018;
     --dark-secondary: #253341;
     --accent-color: #1da1f2;
+    --datepickerbackground: url("../images/calendar.svg");
 }
 
 html[data-theme="dark"] {
@@ -20,6 +21,7 @@ html[data-theme="dark"] {
     --dark-primary: #ffffff;
     --dark-secondary: rgba(199, 205, 209, 0.3);
     --accent-color: #1da1f2;
+    --datepickerbackground: url("../images/calendarlight.svg");
 }
 
 $lightPrimary: var(--light-primary);
@@ -109,4 +111,16 @@ p {
     border-radius: 1vw;
     background-color: $accent;
     // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+select {
+    outline: none;
+    color: $darkPrimary;
+    background-color: transparent;
+    @include setDimensions(90%, 70%);
+
+    option {
+        background-color: $lightSecondary;
+        color: $lightPrimary;
+    }
 }

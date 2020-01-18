@@ -1,5 +1,3 @@
-console.log("Auth connected");
-
 // Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyDmFYr-2MTJwOLN42NB9Ztu60dkNZcjACk",
@@ -11,8 +9,6 @@ var firebaseConfig = {
     appId: "1:492028136445:web:9ca41601be0af954432794",
     measurementId: "G-SZK5J5QE7E"
 };
-
-// console.log(firebase);
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -42,8 +38,4 @@ firebase.auth().onAuthStateChanged(function(user) {
         // ...
         window.location.replace("index.html");
     }
-});
-
-document.querySelector(".signoutbutton").addEventListener("click", () => {
-    funcsignout();
 });

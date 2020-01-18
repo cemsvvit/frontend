@@ -8,8 +8,9 @@ if (localStorage.getItem("colormode") == "dark") {
     colorswitch.classList.add("dark");
     Chart.defaults.global.defaultFontColor = "white";
     try {
-        // myChart.destroy();
-        drawchart();
+        if (chart != null) {
+            chart.update();
+        }
     } catch (error) {
         console.log(error);
     }
@@ -17,8 +18,9 @@ if (localStorage.getItem("colormode") == "dark") {
     colorswitch.classList.remove("dark");
     Chart.defaults.global.defaultFontColor = "#0c1018";
     try {
-        // myChart.destroy();
-        drawchart();
+        if (chart != null) {
+            chart.update();
+        }
     } catch (error) {
         console.log(error);
     }
@@ -31,8 +33,9 @@ colorswitch.addEventListener("click", () => {
         document.documentElement.setAttribute("data-theme", "light");
         Chart.defaults.global.defaultFontColor = "#0c1018";
         try {
-            // myChart.destroy();
-            drawchart();
+            if (chart != null) {
+                chart.update();
+            }
         } catch (error) {
             console.log(error);
         }
@@ -41,8 +44,9 @@ colorswitch.addEventListener("click", () => {
         document.documentElement.setAttribute("data-theme", "dark");
         Chart.defaults.global.defaultFontColor = "white";
         try {
-            // myChart.destroy();
-            drawchart();
+            if (chart != null) {
+                chart.update();
+            }
         } catch (error) {
             console.log(error);
         }
@@ -51,5 +55,5 @@ colorswitch.addEventListener("click", () => {
     window.setTimeout(() => {
         document.documentElement.classList.remove("transition");
         colorswitch.classList.toggle("dark");
-    }, 800);
+    }, 750);
 });

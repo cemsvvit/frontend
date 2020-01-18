@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>CEMS</title>
-        <link rel="stylesheet" href="./css/home.css" />
+        <title>Analytics</title>
+        <link rel="stylesheet" href="./css/analytics.css" />
         <link rel="icon" type="png" href="./images/logo.png" />
+        <script defer src="js/services/Chart.min.js"></script>
+        <script defer src="js/services/firebase-app.js"></script>
+        <script defer src="js/services/firebase-auth.js"></script>
+        <script defer src="js/services/firebase-analytics.js"></script>
+        <script defer src="js/global/ui.js"></script>
+        <script defer src="js/global/colortheme.js"></script>
+        <script defer src="js/authmon.js"></script>
+        <script defer src="js/analytics.js"></script>
     </head>
     <body>
         <div class="menu">
@@ -17,7 +25,7 @@
                 <div class="navigation">
                     <div class="navigationcontainer">
                         <div class="navindicator"></div>
-                        <div class="navigationitem active">
+                        <div class="navigationitem">
                             <div class="naviconholder">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +51,7 @@
                                 <p>Home</p>
                             </div>
                         </div>
-                        <div class="navigationitem">
+                        <div class="navigationitem  active">
                             <div class="naviconholder">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -156,12 +164,123 @@
                 </div>
             </div>
         </div>
-        <script src="js/services/Chart.min.js"></script>
-        <script src="js/services/firebase-app.js"></script>
-        <script src="js/services/firebase-auth.js"></script>
-        <script src="js/services/firebase-analytics.js"></script>
-        <script src="./js/colortheme.js"></script>
-        <script src="./js/navigation.js"></script>
-        <script src="./js/authmon.js"></script>
+        <div class="content">
+            <div class="heading">
+                <h1>Tools</h1>
+            </div>
+            <div class="tools">
+                <div class="tool container">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="34.875"
+                        height="34.875"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        viewBox="0 0 34.875 34.875"
+                    >
+                        <path
+                            id="Icon_awesome-history"
+                            data-name="Icon awesome-history"
+                            d="M35.438,17.967A17.438,17.438,0,0,1,7.056,31.577a1.686,1.686,0,0,1-.129-2.5l.792-.792a1.69,1.69,0,0,1,2.242-.139A12.938,12.938,0,1,0,9.136,8.573L12.7,12.142a1.125,1.125,0,0,1-.8,1.921H1.688A1.125,1.125,0,0,1,.563,12.938V2.716a1.125,1.125,0,0,1,1.921-.8L5.954,5.392A17.437,17.437,0,0,1,35.438,17.967Zm-12.72,5.539.691-.888a1.687,1.687,0,0,0-.3-2.368L20.25,18.025V10.688A1.687,1.687,0,0,0,18.563,9H17.438a1.687,1.687,0,0,0-1.687,1.688v9.538l4.6,3.577a1.688,1.688,0,0,0,2.368-.3Z"
+                            transform="translate(-0.563 -0.563)"
+                        />
+                    </svg>
+                    <h3>Previous usage data</h3>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-chevron-right"
+                    >
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </div>
+                <div class="tool container">
+                    <svg
+                        height="48px"
+                        width="48px"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 100 100"
+                        enable-background="new 0 0 100 100"
+                        xml:space="preserve"
+                    >
+                        <path
+                            d="M91.855,76.625H8.145c-1.104,0-2,0.896-2,2s0.896,2,2,2h83.711c1.104,0,2-0.896,2-2S92.96,76.625,91.855,76.625z"
+                        ></path>
+                        <path
+                            d="M15.068,36.356c1.436,0,2.789-0.361,3.976-0.993l12.543,12.916c-1.076,1.423-1.722,3.187-1.722,5.104  c0,4.682,3.809,8.49,8.491,8.49c4.682,0,8.49-3.809,8.49-8.49c0-1.831-0.588-3.524-1.578-4.912l10.201-8.304  c1.55,1.645,3.741,2.679,6.175,2.679c2.564,0,4.862-1.147,6.42-2.951l8.692,4.733c-0.2,0.722-0.315,1.479-0.315,2.263  c0,4.682,3.809,8.491,8.49,8.491s8.49-3.809,8.49-8.491s-3.809-8.491-8.49-8.491c-2.46,0-4.673,1.058-6.225,2.736l-8.815-4.8  c0.153-0.637,0.243-1.297,0.243-1.98c0-4.682-3.809-8.491-8.49-8.491c-4.683,0-8.492,3.809-8.492,8.491  c0,0.791,0.117,1.553,0.32,2.279l-11.281,9.182c-1.154-0.587-2.454-0.925-3.835-0.925c-1.313,0-2.553,0.309-3.664,0.843  L22.037,32.703c0.957-1.374,1.522-3.04,1.522-4.838c0-4.682-3.809-8.491-8.491-8.491c-4.682,0-8.49,3.809-8.49,8.491  S10.387,36.356,15.068,36.356z M84.932,42.401c2.476,0,4.49,2.015,4.49,4.491c0,2.476-2.015,4.491-4.49,4.491  s-4.49-2.015-4.49-4.491C80.441,44.416,82.456,42.401,84.932,42.401z M61.645,29.865c2.476,0,4.49,2.015,4.49,4.491  s-2.015,4.49-4.49,4.49c-2.477,0-4.492-2.014-4.492-4.49S59.168,29.865,61.645,29.865z M42.847,53.383c0,2.476-2.014,4.49-4.49,4.49  c-2.477,0-4.491-2.015-4.491-4.49c0-2.477,2.015-4.491,4.491-4.491C40.833,48.892,42.847,50.906,42.847,53.383z M15.068,23.375  c2.477,0,4.491,2.015,4.491,4.491s-2.015,4.491-4.491,4.491c-2.476,0-4.49-2.015-4.49-4.491S12.592,23.375,15.068,23.375z"
+                        ></path>
+                    </svg>
+
+                    <h3>Previous usage graph</h3>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-chevron-right"
+                    >
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </div>
+                <div class="tool container">
+                    <svg
+                        height="48px"
+                        width="48px"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 100 100"
+                        enable-background="new 0 0 100 100"
+                        xml:space="preserve"
+                    >
+                        <g>
+                            <path
+                                d="M90,86h-6v-3.5c0-0.828-0.672-1.5-1.5-1.5S81,81.672,81,82.5V86H64v-3.5c0-0.828-0.672-1.5-1.5-1.5S61,81.672,61,82.5V86   H44v-3.5c0-0.828-0.671-1.5-1.5-1.5S41,81.672,41,82.5V86H24v-3.5c0-0.828-0.671-1.5-1.5-1.5S21,81.672,21,82.5V86h-9.5V17.5   c0-0.829-0.671-1.5-1.5-1.5s-1.5,0.671-1.5,1.5v70c0,0.828,0.671,1.5,1.5,1.5h80c0.828,0,1.5-0.672,1.5-1.5S90.828,86,90,86z"
+                            ></path>
+                            <path
+                                d="M25.906,64.475C24.914,63.86,23.75,63.5,22.5,63.5c-3.584,0-6.5,2.916-6.5,6.5s2.916,6.5,6.5,6.5S29,73.584,29,70   c0-1.249-0.36-2.413-0.974-3.404l10.534-10.535c0.184-0.185,0.29-0.408,0.358-0.642c1.028,0.682,2.258,1.081,3.582,1.081   c1.552,0,2.977-0.548,4.096-1.459l9.619,8.33C56.079,63.893,56,64.437,56,65c0,3.584,2.916,6.5,6.5,6.5S69,68.584,69,65   c0-1.657-0.629-3.167-1.654-4.316l2.609-3.964l7.429,9.285C76.52,67.108,76,68.493,76,70c0,3.584,2.916,6.5,6.5,6.5   S89,73.584,89,70s-2.916-6.5-6.5-6.5c-0.994,0-1.933,0.23-2.775,0.631l-8.035-10.045l8.557-12.997   C80.949,41.35,81.707,41.5,82.5,41.5c3.584,0,6.5-2.916,6.5-6.5s-2.916-6.5-6.5-6.5S76,31.416,76,35   c0,1.709,0.668,3.262,1.751,4.423l-8.032,12.2l-2.103-2.628C68.48,47.892,69,46.507,69,45c0-3.584-2.916-6.5-6.5-6.5   c-1.404,0-2.702,0.452-3.766,1.212l-10.49-9.179C48.725,29.627,49,28.595,49,27.5c0-3.584-2.916-6.5-6.5-6.5S36,23.916,36,27.5   c0,0.727,0.125,1.424,0.347,2.078l-8.014,5.008c-0.521,0.326-0.927,0.581-1.257,0.803C25.899,34.222,24.283,33.5,22.5,33.5   c-3.584,0-6.5,2.916-6.5,6.5s2.916,6.5,6.5,6.5S29,43.584,29,40c0-0.727-0.125-1.424-0.346-2.077   c1.476-0.922,7.193-4.496,9.283-5.801C39.111,33.282,40.723,34,42.5,34c1.404,0,2.702-0.452,3.766-1.212l10.49,9.179   C56.275,42.873,56,43.904,56,45c0,3.584,2.916,6.5,6.5,6.5c0.993,0,1.932-0.23,2.774-0.631l2.71,3.388l-3.096,4.704   C64.147,58.667,63.344,58.5,62.5,58.5c-1.917,0-3.638,0.84-4.828,2.164l-9.246-8.007C48.792,51.845,49,50.947,49,50   c0-3.584-2.916-6.5-6.5-6.5S36,46.416,36,50c0,1.323,0.399,2.554,1.081,3.581c-0.233,0.068-0.458,0.174-0.642,0.358L25.906,64.475z   "
+                            ></path>
+                        </g>
+                    </svg>
+                    <h3>Compare usage graph</h3>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-chevron-right"
+                    >
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

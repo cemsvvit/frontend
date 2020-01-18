@@ -11,6 +11,7 @@ html {
   --dark-primary: #0c1018;
   --dark-secondary: #253341;
   --accent-color: #1da1f2;
+  --datepickerbackground: url("../images/calendar.svg");
 }
 
 html[data-theme="dark"] {
@@ -20,6 +21,7 @@ html[data-theme="dark"] {
   --dark-primary: #ffffff;
   --dark-secondary: rgba(199, 205, 209, 0.3);
   --accent-color: #1da1f2;
+  --datepickerbackground: url("../images/calendarlight.svg");
 }
 
 html.transition,
@@ -132,6 +134,19 @@ p {
 ::-webkit-scrollbar-thumb {
   border-radius: 1vw;
   background-color: var(--accent-color);
+}
+
+select {
+  outline: none;
+  color: var(--dark-primary);
+  background-color: transparent;
+  height: 90%;
+  width: 70%;
+}
+
+select option {
+  background-color: var(--light-secondary);
+  color: var(--light-primary);
 }
 
 .menu {
@@ -349,6 +364,7 @@ html {
   --dark-primary: #0c1018;
   --dark-secondary: #253341;
   --accent-color: #1da1f2;
+  --datepickerbackground: url("../images/calendar.svg");
 }
 
 html[data-theme="dark"] {
@@ -358,6 +374,7 @@ html[data-theme="dark"] {
   --dark-primary: #ffffff;
   --dark-secondary: rgba(199, 205, 209, 0.3);
   --accent-color: #1da1f2;
+  --datepickerbackground: url("../images/calendarlight.svg");
 }
 
 html.transition,
@@ -470,6 +487,19 @@ p {
 ::-webkit-scrollbar-thumb {
   border-radius: 1vw;
   background-color: var(--accent-color);
+}
+
+select {
+  outline: none;
+  color: var(--dark-primary);
+  background-color: transparent;
+  height: 90%;
+  width: 70%;
+}
+
+select option {
+  background-color: var(--light-secondary);
+  color: var(--light-primary);
 }
 
 .menu {

@@ -7,3 +7,7 @@ nav[0].addEventListener("click", () => {
 nav[1].addEventListener("click", () => {
     window.location.href = "analytics.html";
 });
+
+document.querySelector(".signoutbutton").addEventListener("click", () => {
+    funcsignout();
+});

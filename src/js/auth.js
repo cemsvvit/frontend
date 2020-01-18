@@ -1,5 +1,3 @@
-console.log("Auth connected");
-
 // Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyDmFYr-2MTJwOLN42NB9Ztu60dkNZcjACk",

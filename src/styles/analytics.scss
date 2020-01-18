@@ -1,0 +1,36 @@
+@import "snippets";
+@import "master";
+@import "menu";
+
+body > div.menu > div > div.navigation > div > div.navindicator {
+    top: 50%;
+    margin-top: -(100% / 12);
+}
+
+.content {
+    .heading {
+        @include setDimensions(15%, 100%);
+        @include gridCenter;
+        justify-items: left;
+
+        h1 {
+            padding-left: 5%;
+        }
+    }
+
+    .tools {
+        @include setDimensions(85%, 100%);
+        @include flex(column);
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        .tool {
+            @include setDimensions(20%, 35%);
+            @include flex(row);
+            justify-content: space-around;
+            margin-left: 5%;
+            margin-top: 5%;
+        }
+    }
+}

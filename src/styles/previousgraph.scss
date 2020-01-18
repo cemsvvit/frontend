@@ -1,0 +1,72 @@
+@import "snippets";
+@import "master";
+@import "menu";
+
+body > div.menu > div > div.navigation > div > div.navindicator {
+    top: 50%;
+    margin-top: -(100% / 12);
+}
+
+.content {
+    .input {
+        @include setDimensions(15%, 100%);
+        @include flex(row);
+        justify-content: left;
+
+        .pickdate {
+            @include setDimensions(65%, 20%);
+            @include gridCenter;
+            margin-left: 5%;
+
+            input[type="date"] {
+                padding: 5%;
+                outline: none;
+                color: $darkPrimary;
+                background-color: transparent;
+                &::-webkit-datetime-edit-month-field {
+                    text-transform: uppercase;
+                }
+                &::-webkit-datetime-edit-day-field {
+                    text-transform: uppercase;
+                }
+                &::-webkit-datetime-edit-year-field {
+                    text-transform: uppercase;
+                }
+                &::-webkit-calendar-picker-indicator {
+                    color: $darkPrimary;
+                    background-image: var(--datepickerbackground);
+                }
+            }
+        }
+
+        .pickbranch {
+            @include setDimensions(65%, 20%);
+            @include gridCenter;
+            margin-left: 5%;
+        }
+
+        .go {
+            @include setDimensions(65%, 20%);
+            @include gridCenter;
+            margin-left: 25%;
+            cursor: pointer;
+        }
+    }
+
+    .graphrel {
+        position: relative;
+        @include setDimensions(85%, 100%);
+        @include gridCenter;
+
+        .graphabs {
+            position: absolute;
+            @include setDimensions(96%, 96%);
+
+            #chart {
+                @include setDimensions(100%, 100%);
+                overflow-y: scroll;
+                overflow-x: scroll;
+            }
+        }
+    }
+}
