@@ -5,16 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Analytics</title>
-        <link rel="stylesheet" href="./css/previousdata.css" />
+        <link rel="stylesheet" href="./css/comparegraph.css" />
         <link rel="icon" type="png" href="./images/logo.png" />
         <script defer src="js/services/Chart.min.js"></script>
         <script defer src="js/services/firebase-app.js"></script>
         <script defer src="js/services/firebase-auth.js"></script>
         <script defer src="js/services/firebase-analytics.js"></script>
+        <script defer src="js/global/fetch.js"></script>
         <script defer src="js/global/ui.js"></script>
         <script defer src="js/global/colortheme.js"></script>
         <script defer src="js/authmon.js"></script>
-        <script defer src="js/previousdata.js"></script>
+        <script defer src="js/comparegraph.js"></script>
     </head>
     <body>
         <div class="menu">
@@ -161,6 +162,38 @@
                             ></path>
                         </svg>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="input">
+                <div class="pickdate container">
+                    <input type="date" name="Datepicker" id="date1" />
+                </div>
+                <div class="pickdate container">
+                    <input type="date" name="Datepicker" id="date2" />
+                </div>
+                <div class="pickbranch container">
+                    <select name="block" id="block">
+                        <option value="2">School</option>
+                        <option value="4">Admin Block</option>
+                        <option value="3">Academic Block</option>
+                        <option value="5">Girls Hostel</option>
+                        <option value="6">Auditorium</option>
+                    </select>
+                </div>
+                <div class="go container" onclick="goclick()">
+                    <h3>Plot</h3>
+                </div>
+            </div>
+            <div class="graphrel">
+                <div class="graphabs">
+                    <canvas id="Chart1"></canvas>
+                </div>
+            </div>
+            <div class="graphrel">
+                <div class="graphabs">
+                    <canvas id="Chart2"></canvas>
                 </div>
             </div>
         </div>
