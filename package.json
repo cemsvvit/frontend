@@ -6,7 +6,7 @@
   "dependencies": {
     "chart.js": "^2.9.3",
     "firebase": "^7.6.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "swup": "^2.0.8"
   },
   "devDependencies": {},
