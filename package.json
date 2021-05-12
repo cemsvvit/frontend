@@ -4,7 +4,7 @@
   "description": "You can use the [editor on GitHub](https://github.com/cemsvvit/frontend/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
   "main": "index.js",
   "dependencies": {
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "firebase": "^7.6.2",
     "jquery": "^3.4.1",
     "swup": "^2.0.8"
